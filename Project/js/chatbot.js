@@ -1,6 +1,6 @@
 // js/chatbot.js - ĐÃ CÓ CHỨC NĂNG CHẶN CÂU HỎI NGOÀI LỀ
 
-const GEMINI_API_KEY = "AQ.Ab8RN6Jb0hnCi2nqaspoKk4OF_yNiWlvHtKUpbL5uY6PYCrVBA";
+const GEMINI_API_KEY = window.GEMINI_API_KEY || "";
 const GOOGLE_SHEET_API_URL = "https://script.google.com/macros/s/AKfycbwkXU7t8BOqjFa1SpnaiCOhQFBPAWRgzH0ymwUJTw-7Xv9G89g1b2uXUaX8_xDRppitRw/exec";
 
 // Database sản phẩm
