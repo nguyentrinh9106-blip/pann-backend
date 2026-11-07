@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ với PÀNN</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="container my-5 py-4">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold text-accent">KẾT NỐI VỚI CHÚNG TÔI</h1>
+            <div class="title-underline mx-auto"></div>
+            <p class="mt-3 text-muted">PÀNN luôn lắng nghe và sẵn sàng giải đáp mọi thắc mắc của bạn.</p>
+        </div>
+
+        <div class="row g-5">
+            <!-- Contact Info -->
+            <div class="col-lg-5">
+                <div class="bg-white p-5 rounded-4 shadow-sm h-100">
+                    <h4 class="fw-bold mb-4">Thông tin liên hệ</h4>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="icon-box me-3">
+                            <i class="bi bi-geo-alt fs-4 text-accent"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Địa chỉ Trụ sở</h6>
+                            <p class="text-muted mb-0">123 Đường Tinh Tế, Phường Thảo Mộc, Quận 1, TP. Hồ Chí Minh</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="icon-box me-3">
+                            <i class="bi bi-telephone fs-4 text-accent"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Hotline</h6>
+                            <p class="text-muted mb-0">0388145357 (8:00 - 21:00)</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="icon-box me-3">
+                            <i class="bi bi-envelope fs-4 text-accent"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Email</h6>
+                            <p class="text-muted mb-0">nguyentrinh9106@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+                    <h6 class="fw-bold mb-3">Theo dõi PÀNN tại:</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-7">
+                <div class="bg-white p-5 rounded-4 shadow-sm">
+                    <h4 class="fw-bold mb-4">Gửi tin nhắn cho PÀNN</h4>
+                    <form id="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold">Họ tên của bạn</label>
+                                <input type="text" class="form-control" placeholder="Ví dụ: Nguyễn Văn A" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold">Số điện thoại</label>
+                                <input type="tel" class="form-control" placeholder="0123 456 789" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label small fw-bold">Chủ đề</label>
+                                <select class="form-select">
+                                    <option selected>Tư vấn sản phẩm</option>
+                                    <option>Góp ý dịch vụ</option>
+                                    <option>Hợp tác đại lý</option>
+                                    <option>Khác</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label small fw-bold">Lời nhắn</label>
+                                <textarea class="form-control" rows="5" placeholder="Hãy nhập nội dung bạn muốn chia sẻ..." required></textarea>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-pann-lg px-5">GỬI LỜI NHẮN</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        
+    </main>
+   
+    <div id="footer-placeholder"></div>
+   
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/component.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Cảm ơn bạn đã liên hệ! PÀNN sẽ phản hồi bạn sớm nhất có thể.');
+            this.reset();
+        });
+    </script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

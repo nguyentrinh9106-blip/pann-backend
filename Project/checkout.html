@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán | PÀNN - Mỹ phẩm thuần chay</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-pann-theme">
+    <div id="header-placeholder"></div>
+
+    <main class="container my-5 py-5">
+        <div class="row g-5">
+            <div class="col-lg-7">
+                <div class="content-box-white shadow-sm p-4 p-md-5">
+                    <h4 class="fw-bold text-accent mb-4"><i class="bi bi-truck me-2"></i>THÔNG TIN GIAO HÀNG</h4>
+                    
+                    <form id="checkout-form">
+                        <div class="row g-3">
+                            <div class="col-md-12">
+                                <label class="form-label fw-semibold text-dark">Họ và tên *</label>
+                                <input type="text" id="cus-name" class="form-control p-3 border-0 bg-light rounded-3" placeholder="Nguyễn Văn A" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-dark">Số điện thoại *</label>
+                                <input type="tel" id="cus-phone" class="form-control p-3 border-0 bg-light rounded-3" placeholder="090xxxxxxx" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-dark">Email *</label>
+                                <input type="email" id="cus-email" class="form-control p-3 border-0 bg-light rounded-3" placeholder="name@example.com" required>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label fw-semibold text-dark">Địa chỉ nhận hàng *</label>
+                                <input type="text" id="cus-address" class="form-control p-3 border-0 bg-light rounded-3" placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố" required>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label fw-semibold text-dark">Ghi chú đơn hàng (Tùy chọn)</label>
+                                <textarea id="cus-note" class="form-control p-3 border-0 bg-light rounded-3" rows="3" placeholder="Lưu ý cho người giao hàng..."></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="content-box-white shadow-sm p-4 mb-4">
+                    <h4 class="fw-bold text-accent mb-4"><i class="bi bi-bag-check me-2"></i>ĐƠN HÀNG CỦA BẠN</h4>
+                    
+                    <div id="checkout-products" class="mb-3">
+                        <div class="d-flex justify-content-between mb-2 pb-2 border-bottom">
+                            <span class="text-muted">Nước tẩy trang hoa hồng x 1</span>
+                            <span class="fw-semibold text-dark">150.000đ</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between fw-bold fs-5 text-accent pt-2">
+                        <span>Tổng cộng:</span>
+                        <span id="checkout-total-price">150.000đ</span>
+                    </div>
+                </div>
+
+                <div class="content-box-white shadow-sm p-4 text-center">
+                    <h5 class="fw-bold text-accent mb-3"><i class="bi bi-qr-code-scan me-2"></i>THANH TOÁN CHUYỂN KHOẢN</h5>
+                    
+                    <p class="small text-muted mb-3">Vui lòng quét mã QR dưới đây để thực hiện thanh toán cho PÀNN.</p>
+                    
+                    <div class="bg-light p-3 rounded-4 d-inline-block mb-3">
+                        <img id="payment-qr" src="" alt="Mã QR Thanh Toán" class="images/Qr 2.jpg" style="max-width: 250px;">
+
+                    <div class="alert alert-warning border-0 text-start small mb-4" style="background-color: #faffd1; color: #4a5d23;">
+                        <p class="mb-1"><strong>Nội dung bắt buộc khi chuyển khoản:</strong></p>
+                        <div class="d-flex align-items-center justify-content-between bg-white p-2 rounded border border-warning">
+                           <div id="order-code-display" class="fw-bold text-danger fs-5">Đang tạo mã...</div>
+                            <button class="btn btn-sm btn-outline-dark py-1" onclick="navigator.clipboard.writeText(document.getElementById('order-code-display').innerText); alert('Đã sao chép mã đơn hàng!');"><i class="bi bi-copy"></i> Copy</button>
+                        </div>
+                        <p class="mb-0 mt-2 text-muted ">* Hệ thống dựa vào đúng mã này để duyệt đơn hàng tự động cho bạn.</p>
+                    </div>
+
+                   <button id="btn-submit-order" class="btn btn-success w-100 py-3 fw-bold fs-5 text-white shadow-sm" style="border-radius: 12px;">
+    XÁC NHẬN ĐÃ CHUYỂN KHOẢN
+</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <div id="chatbot-placeholder"></div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/checkout.js"></script>
+     <script src="js/chatbot.js"></script>
+</body>
+</html>

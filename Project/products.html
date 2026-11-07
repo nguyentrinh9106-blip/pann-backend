@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm | PÀNN - Eco Beauty</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="py-5 text-center" style="background-color: #f2f7c1;">
+        <div class="container">
+            <h1 class="fw-bold text-accent mb-2">CỬA HÀNG THUẦN CHAY</h1>
+            <p class="text-muted italic">Khám phá trọn bộ giải pháp chăm sóc từ thiên nhiên</p>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <aside class="col-lg-3">
+                <div class="filter-section p-4 bg-white rounded-4 shadow-sm mb-4">
+                    <h5 class="fw-bold mb-4">Bộ lọc</h5>
+                    
+                    <!-- Search -->
+                    <div class="mb-4">
+                        <label class="form-label small fw-bold">Tìm kiếm</label>
+                        <div class="input-group">
+                            <input type="text" id="search-input" class="form-control" placeholder="Tên sản phẩm...">
+                            <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="mb-4">
+                        <label class="form-label small fw-bold">Danh mục</label>
+                        <div id="category-filters">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="category" value="all" id="cat-all" checked>
+                                <label class="form-check-label" for="cat-all">Tất cả sản phẩm</label>
+                            </div>
+                            <!-- Danh mục sẽ được render tự động từ JS -->
+                        </div>
+                    </div>
+
+                    <!-- Sort -->
+                    <div class="mb-4">
+                        <label class="form-label small fw-bold">Sắp xếp theo giá</label>
+                        <select id="sort-select" class="form-select">
+                            <option value="default">Mặc định</option>
+                            <option value="low-to-high">Giá thấp đến cao</option>
+                            <option value="high-to-low">Giá cao đến thấp</option>
+                        </select>
+                    </div>
+
+                    <button id="reset-filter" class="btn btn-outline-pann btn-sm w-100">Xóa bộ lọc</button>
+                </div>
+            </aside>
+
+            <!-- Product List -->
+            <main class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <p class="mb-0 text-muted">Hiển thị <span id="product-count" class="fw-bold text-dark">0</span> sản phẩm</p>
+                </div>
+                
+                <div class="row g-4" id="product-grid">
+                    <!-- Sản phẩm sẽ được đổ vào đây -->
+                </div>
+
+                <!-- No Results Message -->
+                <div id="no-results" class="text-center py-5 d-none">
+                    <i class="bi bi-search fs-1 text-muted"></i>
+                    <p class="mt-3">Không tìm thấy sản phẩm phù hợp.</p>
+                </div>
+            </main>
+        </div>
+    </section>
+    <div id="chatbot-placeholder"></div>
+    <div id="footer-placeholder"></div>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/products.js"></script>
+   <script src="js/chatbot.js"></script>
+    
+</body>
+</html>

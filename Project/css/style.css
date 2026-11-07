@@ -1,0 +1,547 @@
+/* project/css/style.css */
+:root {
+    --primary-bg: #faffd1; /* Màu vàng chanh nhạt tinh tế */
+    --accent-color: #4a5d23; /* Xanh rêu trầm đậm cảm giác thiên nhiên */
+    --text-color: #2c3e50;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header & Navbar */
+.navbar {
+    background-color: var(--primary-bg);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+    letter-spacing: 2px;
+    color: var(--accent-color) !important;
+}
+
+.nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+/* Footer */
+.footer {
+    background-color: #f2f7c1; /* Vàng chanh đậm hơn một chút */
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Button PÀNN Style */
+.btn-pann {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border-radius: 25px;
+    padding: 8px 25px;
+    border: none;
+    transition: var(--transition);
+}
+
+.btn-pann:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    color: var(--white);
+}
+
+/* Product Card Style */
+.product-card {
+    background: var(--white);
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+/* project/css/style.css - Thêm vào sau nội dung cũ */
+
+.text-accent {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+/* project/css/style.css - Thêm hoặc ghi đè các class sau */
+
+/* Tiêu đề chính */
+.hero-title {
+    font-size: 3.5rem; /* Kích thước mặc định cho dòng 1 */
+    line-height: 1.1;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.text-large {
+    font-size: 5.5rem; /* Phóng to riêng chữ THIÊN NHIÊN */
+    display: block;
+    margin-top: 10px;
+}
+
+/* Câu hook sang trọng */
+.hero-hook {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 90%;
+    font-style: italic;
+    border-left: 2px solid var(--accent-color);
+    padding-left: 20px;
+}
+
+/* Badge trang trí */
+.badge-eco {
+    display: inline-block;
+    padding: 5px 15px;
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    border-radius: 50px;
+}
+
+/* Nút bấm nâng cấp */
+.btn-pann-lg {
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 15px 40px;
+    border-radius: 0; /* Bo góc vuông hoặc ít tạo sự tối giản sang trọng */
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--accent-color);
+}
+
+.btn-outline-pann {
+    background: transparent;
+    color: var(--accent-color);
+    padding: 15px 30px;
+    border-radius: 0;
+    border: 1px solid var(--accent-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.btn-pann-lg:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+}
+
+/* Ảnh bo góc đặc biệt */
+.rounded-custom {
+    border-radius: 150px 15px 150px 15px; /* Tạo hình khối nghệ thuật */
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+    .hero-title { font-size: 2rem; }
+    .text-large { font-size: 3rem; }
+    .hero-hook { font-size: 1rem; }
+}
+
+/* Voucher Box */
+/* project/css/style.css - Voucher Nổi Bật */
+
+.voucher-wrapper {
+    background-color: var(--white);
+    border: 1px solid rgba(74, 93, 35, 0.1);
+}
+
+.voucher-left {
+    background: linear-gradient(135deg, #ffffff 0%, #faffd1 100%);
+    position: relative;
+}
+
+.voucher-tag {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.voucher-right {
+    background-color: var(--accent-color);
+    color: var(--white);
+    position: relative;
+    border-left: 2px dashed rgba(255, 255, 255, 0.3);
+}
+
+/* Hiệu ứng vết cắt nửa hình tròn ở hai đầu (Răng cưa vé) */
+.voucher-cut-line::before, .voucher-cut-line::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-bg); /* Trùng với màu nền trang web */
+    border-radius: 50%;
+    left: -20px;
+    z-index: 2;
+}
+.voucher-cut-line::before { top: -20px; }
+.voucher-cut-line::after { bottom: -20px; }
+
+/* Box chứa mã Code */
+.voucher-code-box {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px dashed #ffffff;
+    padding: 10px 25px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Nút sao chép mã */
+.btn-copy-voucher {
+    background-color: var(--white);
+    color: var(--accent-color);
+    font-weight: 700;
+    border: none;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-copy-voucher:hover {
+    background-color: #faffd1;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Hiệu ứng hào quang chuyển động nhẹ quanh voucher */
+.voucher-wrapper::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+    transform: rotate(45deg);
+    animation: shine-voucher 6s infinite;
+}
+
+@keyframes shine-voucher {
+    0% { left: -100%; }
+    20% { left: 100%; }
+    100% { left: 100%; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .voucher-right {
+        border-left: none;
+        border-top: 2px dashed rgba(255, 255, 255, 0.3);
+    }
+    .voucher-cut-line::before, .voucher-cut-line::after {
+        display: none;
+    }
+}
+
+/* Card Image Hover */
+.product-card img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.top-2 { top: 10px; }
+.end-2 { right: 10px; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section { padding: 40px 0; text-align: center; }
+    .product-card img { height: 180px; }
+}
+/* project/css/style.css */
+
+.section-title {
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Đường gạch chân trang trí dưới tiêu đề */
+.title-underline {
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin-top: 15px;
+    border-radius: 2px;
+}
+
+/* Tinh chỉnh lại card sản phẩm khi căn giữa */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card .card-body {
+    text-align: center; /* Căn giữa tên và giá sản phẩm bên trong card */
+}
+
+/* Custom font cho dòng mô tả phụ */
+.italic {
+    font-style: italic;
+    font-family: 'Georgia', serif;
+}
+/* Sidebar Filter */
+.filter-section {
+    position: sticky;
+    top: 100px;
+}
+
+.form-check-input:checked {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.form-select, .form-control {
+    border-radius: 8px;
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+.form-select:focus, .form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: none;
+}
+
+/* Card Badge */
+.badge.bg-danger {
+    background-color: #d9534f !important;
+    font-weight: 500;
+}
+/* Breadcrumb style */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "•";
+    color: var(--accent-color);
+}
+
+.product-image-container {
+    transition: all 0.3s ease;
+}
+
+.product-image-container:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+#buy-qty {
+    border-color: #dee2e6;
+    font-weight: bold;
+}
+
+#buy-qty:focus {
+    box-shadow: none;
+    border-color: var(--accent-color);
+}
+/* cart.html Specific Styles */
+#cart-table thead th {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+#cart-table tbody td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.table > :not(caption) > * > * {
+    background-color: transparent;
+    border-bottom-width: 1px;
+    border-color: rgba(0,0,0,0.05);
+}
+
+.input-group .form-control {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.btn-link:hover {
+    opacity: 0.7;
+}
+
+.sticky-top {
+    z-index: 10;
+}
+/* Tông màu chủ đạo nhẹ nhàng */
+:root {
+    --soft-yellow: #fdfdf0;
+    --glass-white: rgba(255, 255, 255, 0.8);
+}
+
+/* Hiệu ứng bo góc và đổ bóng nhẹ */
+.rounded-custom { border-radius: 30px; }
+.soft-shadow { box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+
+/* Hiệu ứng Glassmorphism cho form */
+.glass-card {
+    background: var(--glass-white);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+}
+
+/* Animation nhẹ khi cuộn trang */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Hover hiệu ứng cho icon */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--soft-yellow);
+    border-radius: 18px;
+    transition: 0.3s;
+}
+.icon-box:hover {
+    background: var(--accent-color);
+    color: white !important;
+}/* Màu vàng nhạt đồng bộ với thương hiệu PÀNN */
+.bg-pann-light {
+    background-color: #faffd1 !important; /* Màu vàng chanh rất nhạt */
+}
+
+.glass-card-yellow {
+    background: rgba(250, 255, 209, 0.7); /* Vàng nhạt có độ trong suốt */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 230, 80, 0.3);
+    border-radius: 25px;
+}
+
+/* Thay đổi màu border và input khi focus sang màu xanh rêu */
+.form-control:focus {
+    background-color: #fff;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(107, 138, 81, 0.15);
+}
+
+/* Biểu tượng trong khung vàng */
+.icon-box-green {
+    background: var(--accent-color);
+    color: #faffd1;
+    border-radius: 15px;
+}
+:root {
+    --pann-bg-lemon: #f2f7c1; /* Màu vàng chanh bạn đang dùng trong ảnh */
+    --accent-color: #4a5d23;  /* Màu xanh rêu của tiêu đề */
+}
+
+/* Áp dụng cho toàn bộ background của trang About và Contact */
+.page-pann-theme {
+    background-color: var(--pann-bg-lemon);
+    min-height: 100vh;
+}
+
+/* Khung nội dung màu trắng giống khối "Bộ lọc" trong ảnh */
+.content-box-white {
+    background-color: #ffffff;
+    border-radius: 20px; /* Bo góc mượt giống ảnh */
+    border: none;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+:root {
+    --pann-bg-lemon: #faffd1;        /* Màu nền tổng thể của bạn */
+    --pann-lemon-deep: #eaefc1;      /* Màu vàng chanh đậm hơn để thay cho màu xám */
+    --accent-color: #4a5d23;         /* Màu xanh rêu */
+}
+
+/* Khối Banner tiêu đề trang */
+.page-header-banner {
+    background-color: var(--pann-lemon-deep) !important;
+    padding: 80px 0;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+/* Giữ cấu trúc body nền vàng nhạt */
+.page-pann-theme {
+    background-color: var(--pann-bg-lemon);
+}
+/* Chatbot Widget */
+#chatbot-wrapper { position: fixed; bottom: 30px; right: 30px; z-index: 9999; font-family: sans-serif; }
+#chatbot-toggle { 
+    width: 60px; height: 60px; border-radius: 50%; background: var(--accent-color); 
+    color: white; border: none; font-size: 24px; transition: 0.3s;
+}
+#chatbot-toggle:hover { transform: scale(1.1); background: #3a4a1c; }
+
+#chatbot-container { 
+    width: 350px; height: 450px; background: white; border-radius: 20px; 
+    position: absolute; bottom: 80px; right: 0; display: flex; flex-direction: column; overflow: hidden;
+}
+#chatbot-header { background: var(--accent-color); color: white; padding: 15px; }
+#chatbot-messages { flex: 1; padding: 15px; overflow-y: auto; background: #fdfdf0; display: flex; flex-direction: column; gap: 10px; }
+.message { padding: 10px 15px; border-radius: 15px; max-width: 80%; font-size: 14px; line-height: 1.4; }
+.message.bot { background: #e8efaa; align-self: flex-start; color: #333; border-bottom-left-radius: 2px; }
+.message.user { background: var(--accent-color); color: white; align-self: flex-end; border-bottom-right-radius: 2px; }
+#chatbot-input-area { padding: 10px; border-top: 1px solid #eee; background: white; }
+.bot-avatar { width: 30px; height: 30px; background: #e8efaa; color: var(--accent-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+/* style.css */
+.page-pann-theme {
+    background-color: #f2f7c1; /* Vàng chanh nền */
+}
+
+.content-box-white {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.btn-pann {
+    background-color: #4a5d23; /* Xanh rêu */
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-pann:hover {
+    background-color: #3a4a1c;
+    color: #f2f7c1;
+}
+
+.btn-outline-accent {
+    border: 1px solid #4a5d23;
+    color: #4a5d23;
+    border-radius: 8px;
+}
+
+.text-accent {
+    color: #4a5d23 !important;
+}
+
+.bg-pann-light {
+    background-color: #faffd1;
+}

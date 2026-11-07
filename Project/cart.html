@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng của bạn | PÀNN</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="container my-5 py-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="p-4 bg-white rounded-4 shadow-sm">
+                <h4 class="fw-bold text-accent mb-4">GIỎ HÀNG CỦA BẠN</h4>
+                
+                <div id="cart-items-container"></div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="p-4 bg-white rounded-4 shadow-sm">
+                <h5 class="fw-bold text-accent mb-3">TỔNG ĐƠN HÀNG</h5>
+                <div class="d-flex justify-content-between mb-3 fs-5">
+                    <span>Tạm tính (Món đã chọn):</span>
+                    <span id="cart-total-preview" class="fw-bold text-danger">0đ</span>
+                </div>
+                <hr>
+                <button id="btn-checkout" class="btn btn-pann w-100 py-3 fw-bold">
+                    TIẾN HÀNH THANH TOÁN
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <div id="footer-placeholder"></div>
+    <div id="chatbot-placeholder"></div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body><script src="js/chatbot.js"></script>
+</html>

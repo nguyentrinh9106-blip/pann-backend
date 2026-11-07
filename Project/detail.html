@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm | PÀNN</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="container my-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-muted">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="products.html" id="breadcrumb-cat" class="text-decoration-none text-muted">Sản phẩm</a></li>
+                <li class="breadcrumb-item active" id="breadcrumb-name" aria-current="page">Chi tiết</li>
+            </ol>
+        </nav>
+
+        <div class="row g-5">
+            <!-- Product Images -->
+            <div class="col-md-6">
+                <div class="product-image-container p-2 bg-white rounded-4 shadow-sm">
+                    <img id="product-img" src="" alt="" class="img-fluid rounded-4 w-100">
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="col-md-6">
+                <div class="ps-md-4">
+                    <span id="product-tag" class="badge-eco mb-2">PÀNN EXCLUSIVE</span>
+                    <h1 id="product-name" class="display-6 fw-bold text-accent mb-3"></h1>
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="text-warning me-2" id="product-rating">
+                            <!-- Sao đánh giá render từ JS -->
+                        </div>
+                        <span class="text-muted small" id="product-reviews"></span>
+                    </div>
+
+                    <div class="price-box mb-4">
+                        <h3 class="text-accent fw-bold d-inline-block" id="product-price"></h3>
+                        <del class="text-muted ms-2" id="product-old-price"></del>
+                    </div>
+
+                    <p class="text-muted mb-4 fs-5" id="product-desc"></p>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-bold">Số lượng:</label>
+                        <div class="input-group" style="width: 130px;">
+                            <button class="btn btn-outline-secondary" onclick="changeQty(-1)">-</button>
+                            <input type="number" id="buy-qty" class="form-control text-center" value="1" min="1">
+                            <button class="btn btn-outline-secondary" onclick="changeQty(1)">+</button>
+                        </div>
+                        <small class="text-muted mt-2 d-block">Còn lại trong kho: <span id="product-stock"></span></small>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex">
+                        <button class="btn btn-pann-lg px-5 py-3 flex-grow-1" id="add-to-cart-btn">
+                            <i class="bi bi-cart-plus me-2"></i>THÊM VÀO GIỎ HÀNG
+                        </button>
+                    </div>
+
+                    <div class="mt-5 border-top pt-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-shield-check text-accent me-2"></i>
+                            <span>Cam kết 100% thuần chay và không thử nghiệm trên động vật.</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-truck text-accent me-2"></i>
+                            <span>Giao hàng miễn phí cho đơn hàng từ 500.000đ.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <section class="mt-5 pt-5">
+            <h3 class="text-accent fw-bold text-center mb-5">CÓ THỂ BẠN CŨNG THÍCH</h3>
+            <div class="row g-4" id="related-products">
+                <!-- Render từ JS -->
+            </div>
+        </section>
+    </main>
+    <div id="chatbot-placeholder"></div>
+    <div id="footer-placeholder"></div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/detail.js"></script>
+     <script src="js/chatbot.js"></script>
+</body>
+</html>
