@@ -27,15 +27,18 @@ QUY TẮC:
  if (apiKey && apiKey !== 'AIzaSyDemoKeyYourGeminiApiKeyHere12345') {
  try {
  const genAI = new GoogleGenerativeAI(apiKey);
- const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash',
-systemInstruction });
+ const model = genAI.getGenerativeModel({
+  model: 'gemini-3.8-flash',
+  systemInstruction
+});
  const result = await model.generateContent(`Khách hàng hỏi: "${message}". Hãy tư
 vấn chi tiết.`);
  return res.status(200).json({ success: true, provider: 'Google Gemini 1.5 Flash',
 reply: result.response.text() });
  } catch (err) {
- console.warn('Fallback sang chế độ tìm kiếm thông minh.');
- }
+  console.error('LỖI GEMINI API:', err);
+  console.warn('Fallback sang chế độ tìm kiếm thông minh.');
+}
  }
  // 3. Chế độ Fallback thông minh dự phòng
  
